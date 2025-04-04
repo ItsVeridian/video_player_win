@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
+import 'package:video_player_win/video_player_win.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,11 +16,11 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  VideoPlayerController? controller;
+  WinVideoPlayerController? controller;
 
   void reload() {
     controller?.dispose();
-    controller = VideoPlayerController.file(File("E:\\test_youtube.mp4"));
+    controller = WinVideoPlayerController.file(File("E:\\test_youtube.mp4"));
     //controller = WinVideoPlayerController.file(File("E:\\test_youtube.mp4"));
     //controller = VideoPlayerController.networkUrl(Uri.parse("https://media.w3.org/2010/05/sintel/trailer.mp4"));
     //controller = WinVideoPlayerController.file(File("E:\\Downloads\\0.FDM\\sample-file-1.flac"));
